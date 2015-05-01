@@ -1,0 +1,147 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COPYRIGHT: (C) 2012-2015 FAU FabLab and others
+% Bearbeitungen ab 2015-02-20 fallen unter CC-BY-SA 3.0
+% Sobald alle Mitautoren zugestimmt haben, steht die komplette Datei unter CC-BY-SA 3.0. Bis dahin ist der Lizenzstatus aller alten Bestandteile ungeklärt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\basedir}{fablab-document}
+\documentclass{\basedir/fablab-document}
+
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+\usepackage{amssymb} % Symbole für Knöpfe
+\usepackage{subfigure,caption}
+\usepackage{eurosym}
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+\usepackage{wrapfig} % Textumlauf um Bilder
+
+\renewcommand{\texteuro}{\euro}
+
+\definecolor{dunkelgruen}{rgb}{0,0.4,0}
+
+\newcommand{\img}[2]{
+	\begin{figure}[ht]%
+	\includegraphics[width=\columnwidth]{img/#1}%
+	\caption{#2}%
+	\end{figure}}
+	
+\newcommand\circlearound[1]{%
+  \tikz[baseline]\node[draw,shape=circle,anchor=base] {#1} ;}
+	
+\newcounter{ueberpunkte}
+\setcounter{ueberpunkte}{1}
+\renewcommand{\labelenumi}{\circlearound{\theueberpunkte}\stepcounter{ueberpunkte}}
+
+\linespread{1.2}
+
+\date{2014}
+\author{Michael Jäger}
+\fancyfoot[C]{kontakt@fablab.fau.de}
+\title{Produkte anlegen im ERP}
+
+\begin{document}
+
+\img{01_Kategorie_heraussuchen.pdf}{Kategorie heraussuchen in die das Produkt passt}
+\begin{enumerate}
+	\item Kategorieansicht auswählen
+	\item Unterkategorie auswählen oder neu anlegen, falls noch nicht vorhanden
+\end{enumerate}
+
+\newpage
+\img{02_Produkt_anlegen.pdf}{Produkt anlegen}
+\begin{enumerate}
+	\item Neues, leeres Produkt anlegen
+\end{enumerate}
+
+\newpage
+\img{03_Produkt_Informationen.pdf}{Produktinformationen ausfüllen - Reiter Übersicht}
+
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Müssen ausgefüllt werden}} \\
+Produktbezeichnung & Sinnvolle Beschreibung durch die man den Artikel auch durch Suche findet \\
+Interne Referenz & Artikelnummer im Kassensystem, 4 stellige Zahl \textbf{mit führenden Nullen!} \\
+                 & (probiere eine zufällige Zahl rund um 4000) \\
+                 & Wenn die Nummer bereits belegt ist, kommt beim Speichern der Fehler:\\
+                 & \enquote{code of product must be unique!} \\
+                 & \url{https://github.com/fau-fablab/oerp-nextid} kann auch helfen \\
+Verkaufspreis & meist mindestens 1,5-facher Einkaufspreis, mindestens einige Cent mehr\\
+& \\
+\multicolumn{2}{l}{\color{orange}\textbf{Müssen überprüft werden}} \\
+Kategorie & Sinnvolle Einsortierung um den Artikel wiederzufinden\\
+Kann verkauft werden & Anhaken wenn der Artikel zum Verkauf steht\\
+Produktart & \begin{tabular}{@{}>{\itshape}l@{\qquad}l} Verbrauchsmaterial & normale Verkaufsware \\
+ Dienstleistung & immaterialle Güter z.\,B.\  Laserzeit \\
+ Lagerprodukt & nur nach extra Bestellung (benutzen wir eigtl.\  net)
+\end{tabular} \\
+ME (Mengeneinheit) & Verkaufeinheit z.\,B.\  Stück, Zentimeter, Gramm \\
+& \\
+\multicolumn{2}{l}{\color{dunkelgruen}\textbf{Können ausgefüllt werden}} \\
+EAN13 Barcode & EAN Barcode, falls bekannt \\
+& \\
+\end{tabular}
+\begin{enumerate}
+	\item Reiter Beschaffung
+\end{enumerate}
+
+\newpage
+\img{04_Produkt_Beschaffung.pdf}{Produktbeschaffung ausfüllen - Reiter Beschaffung}
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Müssen ausgefüllt werden}} \\
+Herstellungskosten & Einkaufspreis \textbf{pro Verkaufseinheit}, dieser wird auch \\
+                   & für Eingangsrechnungen verwendet \\
+& \\
+\multicolumn{2}{l}{\color{orange}\textbf{Müssen überprüpft werden}} \\
+Einkauf ME (Mengeneinheit) & Wird der Artikel im z.\,B.\  100er Pack gekauft oder einzeln?\\
+Hersteller & Falls bekannt bitte eintragen, vor allem bei Elektronik\\
+Hersteller-Produktname & Falls bekannt bitte eintragen, vor allem bei Elektronik\\
+Hersteller-Artikelnummer & Falls bekannt bitte eintragen, vor allem bei Elektronik\\
+\end{tabular}
+\begin{enumerate}
+	\item Lieferant(en) hinzufügen
+\end{enumerate}
+
+\newpage
+\img{05_Produkt_Lieferant.pdf}{Lieferant eintragen - PopUp Lieferant}
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Müssen ausgefüllt werden}} \\
+Lieferant & Lieferant auswählen oder neu anlegen, falls noch nicht vorhanden\\
+Produktbezeichnung bei Lieferant & Artikel\textbf{name} beim Lieferanten\\
+Kurzbezeichnung bei Partner & Bestell\textbf{nummer} beim Lieferanten \\
+Minimale Menge & Mindestbestellmenge bei diesem Lieferanten \\
+Tabelle  & \begin{tabular}{@{}>{\itshape}l@{\qquad}l} Menge & Einkaufsmenge beim Lieferanten z.\,B.\  Staffelpreise \\
+ Stückpreis & zugehöriger Stückpreis \textbf{pro Einkaufseinheit} \\
+\end{tabular} \\
+& \\
+\multicolumn{2}{l}{\color{dunkelgruen}\textbf{Können ausgefüllt werden}} \\
+Speichern \& Neu & Zweiten Lieferanten anlegen, falls vorhanden \\
+& \\
+\end{tabular}
+\begin{enumerate}
+	\item Speichern \& Beenden
+	\item Reiter Bestand
+\end{enumerate}
+
+\newpage
+\img{06_Produkt_Bestand.pdf}{Lagerort eintragen - Reiter Bestand}
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{orange}\textbf{Müssen überprüpft werden}} \\
+Lagerort & Falls bekannt eintragen, ansonsten wird der Lagerort der Kategorie verwendet \\
+& \\
+\end{tabular}
+\begin{enumerate}
+	\item Reiter Finanzen
+\end{enumerate}
+
+\newpage
+\img{07_Produkt_Finanzen.pdf}{Steuer eintragen - Reiter Finanzen}
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Müssen ausgefüllt werden}} \\
+Steuer des Einkaufs (Vorsteuer) & Immer inkl. 19\% MwSt \\
+& \\
+\end{tabular}
+\begin{enumerate}
+	\item Speichern \& fertig
+\end{enumerate}
+
+
+\end{document}
