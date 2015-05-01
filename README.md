@@ -1,5 +1,5 @@
 OpenERP Einweisung
-=====================
+==================
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) in [OpenERP](https://fablab.fau.de/tool/openerp-einweisung).
 
@@ -9,12 +9,12 @@ auschecken
 ----------
 
 ```bash
-git clone --recursive git@github.com:fau-fablab/oerp-einweisung-einweisung.git
+git clone --recursive git@github.com:fau-fablab/oerp-einweisung.git
 ```
 
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
-[![Build Status](https://user.fablab.fau.de/~buildserver/oerp-einweisung-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung-einweisung/)
+[![Build Status](https://user.fablab.fau.de/~buildserver/oerp-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung/)
 
 Lizenz
 ------
