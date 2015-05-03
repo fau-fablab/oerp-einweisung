@@ -3,7 +3,7 @@ OpenERP Einweisung
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) in [OpenERP/Odoo](https://odoo.com).
 
-Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/oerp-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/oerp-einweisung/ abrufbar.
+Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/oerp-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/oerp-einweisung/Produkt_anlegen.pdf abrufbar.
 
 auschecken
 ----------
