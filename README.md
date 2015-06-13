@@ -15,6 +15,7 @@ git clone --recursive git@github.com:fau-fablab/oerp-einweisung.git
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
 [![Build Status](https://user.fablab.fau.de/~buildserver/oerp-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung/)
+[![TODOs](https://user.fablab.fau.de/~buildserver/oerp-einweisung/status-todos.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung/)
 
 Lizenz
 ------
