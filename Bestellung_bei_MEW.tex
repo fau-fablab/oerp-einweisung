@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COPYRIGHT: (C) 2012-2015 FAU FabLab and others
+% Bearbeitungen ab 2015-02-20 fallen unter CC-BY-SA 3.0
+% Sobald alle Mitautoren zugestimmt haben, steht die komplette Datei unter CC-BY-SA 3.0. Bis dahin ist der Lizenzstatus aller alten Bestandteile ungeklärt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\basedir}{fablab-document}
+\documentclass{\basedir/fablab-document}
+
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+\usepackage{amssymb} % Symbole für Knöpfe
+\usepackage{subfigure,caption}
+\usepackage{eurosym}
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+\usepackage{wrapfig} % Textumlauf um Bilder
+\usepackage{tikz}
+
+\renewcommand{\texteuro}{\euro}
+
+\definecolor{dunkelgruen}{rgb}{0,0.4,0}
+
+\newcommand{\img}[2]{
+	\begin{figure}[ht]%
+	\includegraphics[width=\columnwidth]{img/#1}%
+	\caption{#2}%
+	\end{figure}}
+	
+\newcommand\circlearound[1]{%
+  \tikz[baseline]\node[draw,shape=circle,anchor=base] {#1} ;}
+	
+\newcounter{ueberpunkte}
+\setcounter{ueberpunkte}{1}
+\renewcommand{\labelenumi}{\circlearound{\theueberpunkte}\stepcounter{ueberpunkte}}
+
+\tikzstyle{ablaufGross} = [rectangle, draw, thick, draw=black, fill=red!40,
+    text width=\textwidth, text centered, rounded corners, minimum height=6em]
+\newcommand{\ueb}[1]{\textbf{#1}\\}
+		
+\newcommand{\kastenRot}[2]{
+\begin{tikzpicture}
+	\node[ablaufGross]
+		{\ueb{#1} 
+		#2};
+\end{tikzpicture}}
+
+\linespread{1.2}
+
+\date{2015}
+\author{Michael Jäger}
+\fancyfoot[C]{kontakt@fablab.fau.de}
+\title{Produkte anlegen im ERP}
+
+\begin{document}
+
+\section{Anleitung}
+
+\subsection*{Bestellung im ERP anlegen}
+\kastenRot{Wichtig}{Pro Projekt / Person jeweils eine einzelne Bestellung bei der MEW aufgeben und im ERP einzeln anlegen!}
+
+
+\img{11_Angebot_erstellen.pdf}{Angebot im ERP anlegen und speichern}
+
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Müssen ausgefüllt werden}} \\
+Geschäftsbedingungen 									& Kurze Beschreibung für was oder wen bestellt wird \\
+\multicolumn{2}{l}{\color{orange}\textbf{Bei Bestellung von Auftragsarbeiten beim Schreiner}} \\
+Falls Schubladen oder ähnliches 			& Artikel \textbf{[0441] Auftragsfertigung Schreiner} verwenden und \\
+und es nicht verkauft wird						& mit den voraussichtlichen Kosten anlegen \\
+\multicolumn{2}{l}{\color{dunkelgruen}\textbf{Für das MEW Bestellformular wichtig}} \\
+PO Nummer 		& \\
+Bestelldatum 	& \\
+\end{tabular}
+
+
+\newpage 
+\subsection*{Bestellzettel der MEW ausfüllen}
+\img{12_Materialbestellformular_mw.pdf}{Ausschnitt aus dem Bestellformular der MEW}
+
+\begin{tabular}{>{\itshape}l@{\qquad}l}
+\multicolumn{2}{l}{\color{red}\textbf{Pflichtfelder - Müssen wie im ERP ausgefüllt werden}} \\
+Projekt/Kostenst.											& PO Nummer aus dem ERP \textbf{und} ein Wort als Beschreibung / Person \\
+																			& \quad \textcolor[rgb]{0.4,0.4,0.4}{z.B. PO00001 - Laser} \\
+																			& \quad \textcolor[rgb]{0.4,0.4,0.4}{z.B. PO00002 - Mustermann} \\
+Datum																	& Bestelldatum aus dem ERP \\
+\multicolumn{2}{l}{\color{orange}\textbf{Pflichtfelder}} \\
+Lehrstuhl 														& Lst. Informatik 3 \\
+Lehrstuhlkürzel												& i3-FabLab \\
+Kundennummer 													& 11031 \\
+Kundenstatus													& normalerweise 1b (bei nicht wirtschaftlicher Tätigkeit), ansonst 1a \\
+Name																	& Name des Bestellers \\
+\multicolumn{2}{l}{\color{dunkelgruen}\textbf{Optional}} \\
+Telefon																& Telefonnumer oder E-Mail Adresse, man bekommt bescheid wenn es fertig ist \\
+\end{tabular}
+
+\newpage 
+\subsection*{MEW Rechnung verarbeiten}
+to be continued
+
+\end{document}
