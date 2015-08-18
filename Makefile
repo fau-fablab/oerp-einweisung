@@ -1,2 +1,2 @@
-TARGET=Produkt_anlegen
+TARGET=Produkt_anlegen Bestellung_bei_MEW
 include fablab-document/Makefile.include
