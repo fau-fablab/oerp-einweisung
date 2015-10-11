@@ -1,0 +1,73 @@
+\newcommand{\basedir}{fablab-document/}
+\documentclass{\basedir/fablab-document}
+
+\title{Richtlinien zur Benennung von Lagerplätzen}
+\author{Michael Jäger, Patrick Kanzler}
+
+\fancyfoot[L]{https://github.com/fau-fablab/docs}
+\fancyfoot[C]{}
+%\fancyfoot[R]{Liste Nr. \underline{~~~~~~~~}}
+
+\begin{document}
+%optional: dicke Überschrift auf der ersten Seite
+\vspace*{-9em}\maketitle
+ 
+Die Lagerplätze im FabLab sollen einheitlich kodiert sein, um Dinge schneller zu finden.
+Der Lagerort soll sowohl für neue, als auch für alte Artikel nach und nach angepasst werden.
+Zusätzlich müssen alle häufig verwendeten Lagerorte noch menschenlesbar beschriftet werden.
+(Bei den Elektronikkisten z.\,B. E2 {\it Buchsen und Stecker})
+
+\textbf{Beispiele}
+
+\textit{Feilen - Werkbank, Schublade Nr. 2 vorne links}\newline
+W2-VL
+
+\textit{Rundmaterial 50mm Stahl - Drehbank, Schublade, Hinten}\newline
+D1-H
+
+\textbf{Die Lagerkennung ist wie folgt zu bilden:}
+
+\begin{enumerate}
+\item Ort (im ERP als Lagerort auswählen, beim einzelnen Produkt oder für dessen Kategorie)
+\begin{enumerate}
+\item Grober Lagerort (Buchstabe)
+	
+	\begin{tabular}{c|c|c|c}
+	\hline 
+	K & \textbf{K}ellerlager & W & \textbf{W}erkbank \\ 
+	\hline 
+	E & \textbf{E}lektrowerkstatt & D & \textbf{D}rehbank \\ 
+	\hline 
+	C & \textbf{C}hemietisch & P & \textbf{P}lexiglasregal \\ 
+	\hline 
+	S & \textbf{S}chraubenregal & V & \textbf{V}itrine \\ 
+	\hline 
+	B & Schrank im \textbf{B}esprechungsraum & F & \textbf{F}räserkasten \\ 
+	\hline 
+	\end{tabular} 
+\item Genauerer Lagerort (Zahl) \newline
+	z.\,B. eine Schubladen- oder Kistennummer\newline
+    1, 2, 3, ...
+\end{enumerate}
+\textcolor{gray}{
+\item    Bindestrich --
+\item   optional: Genauer Platz (Zahl oder Buchstabe) (im ERP mit den Freitext-Feldern, die verwirrender Weise \enquote{Regal, Zeile, Vorfall} heißen)
+	\begin{itemize}
+	\item Fachnummer \newline
+	1, 2, 3, ...
+	\item Position\newline
+    HR - hinten rechts\newline
+    HL - hinten links\newline
+    VR - vorne rechts\newline
+    HR - hinten rechts\newline
+    HM - hinten mitte\newline
+    VM - vorne mitte\newline
+    V - Vorne\newline
+    H - Hinten\newline
+    L - links\newline
+    M - Mitte\newline
+    R - Rechts
+	\end{itemize}
+}
+\end{enumerate}
+\end{document}

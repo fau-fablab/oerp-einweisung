@@ -7,6 +7,7 @@ Einweisung des [FAU FabLab](https://fablab.fau.de) in [OpenERP/Odoo](https://odo
 
 - [Produkt anlegen](https://user.fablab.fau.de/~buildserver/oerp-einweisung/Produkt_anlegen.pdf)
 - [Bestellung bei MEW](https://user.fablab.fau.de/~buildserver/oerp-einweisung/Bestellung_bei_MEW.pdf)
+- [Richtlinien zur Lagerortbenennung](https://user.fablab.fau.de/~buildserver/oerp-einweisung/lagerbenennung.pdf)
 
 auschecken
 ----------
