@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COPYRIGHT: (C) 2012-2015 FAU FabLab and others
+% Bearbeitungen ab 2015-02-20 fallen unter CC-BY-SA 3.0
+% Sobald alle Mitautoren zugestimmt haben, steht die komplette Datei unter CC-BY-SA 3.0. Bis dahin ist der Lizenzstatus aller alten Bestandteile ungeklärt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\basedir}{fablab-document}
+\documentclass{\basedir/fablab-document}
+
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+\usepackage{amssymb} % Symbole für Knöpfe
+\usepackage{subfigure,caption}
+\usepackage{eurosym}
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+\usepackage{wrapfig} % Textumlauf um Bilder
+\usepackage{tikz}
+
+\renewcommand{\texteuro}{\euro}
+
+\definecolor{dunkelgruen}{rgb}{0,0.4,0}
+
+\newcommand{\img}[2]{
+	\begin{figure}[ht]%
+	\includegraphics[width=\columnwidth]{img/#1}%
+	\caption{#2}%
+	\end{figure}}
+	
+\newcommand\circlearound[1]{%
+  \tikz[baseline]\node[draw,shape=circle,anchor=base] {#1} ;}
+	
+\newcounter{ueberpunkte}
+\setcounter{ueberpunkte}{1}
+\renewcommand{\labelenumi}{\circlearound{\theueberpunkte}\stepcounter{ueberpunkte}}
+
+\tikzstyle{ablaufGross} = [rectangle, draw, thick, draw=black, fill=red!40,
+    text width=\textwidth, text centered, rounded corners, minimum height=6em]
+\newcommand{\ueb}[1]{\textbf{#1}\\}
+		
+\newcommand{\kastenRot}[2]{
+\begin{tikzpicture}
+	\node[ablaufGross]
+		{\ueb{#1} 
+		#2};
+\end{tikzpicture}}
+
+\linespread{1.2}
+
+\date{2015}
+\author{FAU FabLab}
+\fancyfoot[C]{kontakt@fablab.fau.de}
+\title{Neues Geschäftsjahr/Periode}
+
+\begin{document}
+\todo{mehr schreiben}
+
+Ohne Periode beziehungsweise Geschäftsjahr ist keine Buchung möglich.
+Somit muss am Anfang eines Jahres ein neues Geschäftsjahr angelegt werden.
+Dies geht unter Finanzen $\rightarrow$ Konfiguration $\rightarrow$ Perioden $\rightarrow$ Geschäftsjahr.
+\end{document}

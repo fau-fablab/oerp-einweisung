@@ -1,2 +1,2 @@
-TARGET=Produkt_anlegen Bestellung_bei_MEW lagerbenennung
+TARGET=Produkt_anlegen Bestellung_bei_MEW lagerbenennung Neues_Jahr_Periode
 include fablab-document/Makefile.include
