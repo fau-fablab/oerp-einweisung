@@ -5,9 +5,9 @@ Einweisung des [FAU FabLab](https://fablab.fau.de) in [OpenERP/Odoo](https://odo
 
 **PDF Download**: 
 
-- [Produkt anlegen](https://user.fablab.fau.de/~buildserver/oerp-einweisung/Produkt_anlegen.pdf)
-- [Bestellung bei MEW](https://user.fablab.fau.de/~buildserver/oerp-einweisung/Bestellung_bei_MEW.pdf)
-- [Richtlinien zur Lagerortbenennung](https://user.fablab.fau.de/~buildserver/oerp-einweisung/lagerbenennung.pdf)
+- [Produkt anlegen](https://brain.fablab.fau.de/build/oerp-einweisung/Produkt_anlegen.pdf)
+- [Bestellung bei MEW](https://brain.fablab.fau.de/build/oerp-einweisung/Bestellung_bei_MEW.pdf)
+- [Richtlinien zur Lagerortbenennung](https://brain.fablab.fau.de/build/oerp-einweisung/lagerbenennung.pdf)
 
 auschecken
 ----------
@@ -18,8 +18,8 @@ git clone --recursive git@github.com:fau-fablab/oerp-einweisung.git
 
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
-[![Build Status](https://user.fablab.fau.de/~buildserver/oerp-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung/)
-[![TODOs](https://user.fablab.fau.de/~buildserver/oerp-einweisung/status-todos.svg)](https://user.fablab.fau.de/~buildserver/oerp-einweisung/)
+[![Build Status](https://brain.fablab.fau.de/build/oerp-einweisung/status.svg)](https://brain.fablab.fau.de/build/oerp-einweisung/)
+[![TODOs](https://brain.fablab.fau.de/build/oerp-einweisung/status-todos.svg)](https://brain.fablab.fau.de/build/oerp-einweisung/)
 
 Lizenz
 ------
